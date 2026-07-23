@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
   FaGraduationCap,
   FaUniversity,
-  FaSchool,
 } from "react-icons/fa";
 import EducationCard from "./EducationCard";
 
@@ -35,20 +34,6 @@ const education = [
       "Commerce with Computer Studies",
       "Developed analytical and logical thinking",
       "Participated in college activities",
-    ],
-  },
-  {
-    title: "Secondary Education Examination (SEE)",
-    institute: "Shree Saraswati Secondary School",
-    university: "",
-    duration: "2075 – 2076",
-    status: "Completed",
-    icon: FaSchool,
-    color: "pink",
-    highlights: [
-      "Completed SEE successfully",
-      "Excellent academic foundation",
-      "Active in extracurricular activities",
     ],
   },
 ];

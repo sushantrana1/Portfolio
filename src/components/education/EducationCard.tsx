@@ -27,11 +27,6 @@ const colors = {
     bg: "bg-purple-500/10",
     text: "text-purple-400",
   },
-  pink: {
-    border: "border-pink-500/30",
-    bg: "bg-pink-500/10",
-    text: "text-pink-400",
-  },
 };
 
 const EducationCard = ({

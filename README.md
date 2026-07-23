@@ -2,25 +2,14 @@
 
 A modern, responsive, and animated developer portfolio built using **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. This portfolio showcases my projects, technical skills, education, certifications, and experience as a Full Stack Developer.
 
-🌐 **Live Demo:** https://your-vercel-link.vercel.app  
-💻 **GitHub Repository:** https://github.com/Sushantrana1/your-portfolio-repo
+🌐 **Live Demo:** [https://your-vercel-link.vercel.app  ](https://portfolio-blond-six-83.vercel.app/)
 
 ---
 
 ## 📸 Preview
 
-> Add a screenshot of your portfolio here.
+<img width="1352" height="591" alt="image" src="https://github.com/user-attachments/assets/d357e528-e791-4be1-ba9e-917682744da1" />
 
-```text
-public/
-└── preview.png
-```
-
-Then use:
-
-```md
-![Portfolio Preview](./public/preview.png)
-```
 
 ---
 
@@ -156,14 +145,9 @@ This portfolio showcasing my work, skills, education and certifications.
 Clone the repository
 
 ```bash
-git clone https://github.com/Sushantrana1/your-portfolio-repo.git
+git clone https://github.com/sushantrana1/Portfolio/
 ```
 
-Go into the project folder
-
-```bash
-cd your-portfolio-repo
-```
 
 Install dependencies
 
@@ -215,16 +199,10 @@ src
 
 📧 Email: **sushantrana1121@gmail.com**
 
-📱 Phone: **+977-9815631275**
-
-📍 Location: **Dhangadhi, Kailali, Nepal**
-
 ### Social Links
 
 - GitHub: https://github.com/Sushantrana1
 - LinkedIn: https://www.linkedin.com/in/sushant-rana-5770a6266/
-- Facebook: https://www.facebook.com/profile.php?id=61558983760722
-- WhatsApp: https://wa.me/9779815631275
 
 ---
 

@@ -14,8 +14,6 @@ import {
   SiGithub,
   SiPostman,
 } from "react-icons/si";
-import { FaMobileAlt, FaPalette } from "react-icons/fa";
-import { MdApi } from "react-icons/md";
 import { VscCode } from "react-icons/vsc";
 
 const skillGroups = [

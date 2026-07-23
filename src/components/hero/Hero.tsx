@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FaGithub, FaLinkedin, FaEnvelope, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import Sushant from "../../assets/images/Sushant.jpg";
 import {

@@ -3,8 +3,6 @@ import {
   FaGraduationCap,
   FaUniversity,
   FaSchool,
-  FaCalendarAlt,
-  FaCheckCircle,
 } from "react-icons/fa";
 import EducationCard from "./EducationCard";
 

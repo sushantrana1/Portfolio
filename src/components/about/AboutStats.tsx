@@ -1,5 +1,3 @@
-import CountUp from "react-countup";
-
 import { useInView } from "react-intersection-observer";
 
 const stats = [
@@ -21,7 +19,7 @@ const stats = [
 ];
 
 const AboutStats = () => {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: true,
   });
 

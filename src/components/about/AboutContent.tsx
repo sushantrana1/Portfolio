@@ -38,12 +38,13 @@ const AboutContent = () => {
       viewport={{ once: true }}
     >
       {/* Badge */}
-      <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-lg font-semibold tracking-wide text-cyan-400">
-        ABOUT ME
+      <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-500/10 
+          px-4 py-2 font-semibold tracking-wide text-cyan-400 text-sm sm:text-sm md:text-sm">
+        About Me
       </span>
 
       {/* Heading */}
-      <h2 className="mt-6 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+      <h2 className="mt-5 font-bold leading-tight text-white text-2xl sm:text-4xl md:text-4xl ">
         Passionate Full Stack Developer Building
         <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           Modern Web Experiences
@@ -51,7 +52,7 @@ const AboutContent = () => {
       </h2>
 
       {/* Description */}
-      <p className="mt-6 text-base leading-8 text-slate-400">
+      <p className="mt-6 leading-8 text-slate-400 text-sm sm:text-base md:text-lg">
         I'm a passionate Full Stack Developer who enjoys building modern,
         scalable, and responsive web applications using React, TypeScript,
         Node.js, Express, MongoDB, and Tailwind CSS. I love transforming ideas
@@ -59,14 +60,14 @@ const AboutContent = () => {
         and efficient code.
       </p>
 
-      <p className="mt-4 text-base leading-8 text-slate-400">
+      <p className="mt-4 leading-8 text-slate-400 text-sm sm:text-base md:text-lg">
         I continuously improve my skills through real-world projects, learning
         new technologies, and focusing on delivering high-quality user
         experiences with attention to detail and performance.
       </p>
 
       {/* Feature Cards */}
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+      <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4">
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}
@@ -87,15 +88,15 @@ const AboutContent = () => {
       </div>
 
       {/* Buttons */}
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+      <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:flex sm:gap-4">
         <a
           href="/resume/Sushant_CV.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 rounded-full bg-cyan-500 px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600"
+          className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:px-8 sm:py-3 sm:text-base"
         >
-          <FiDownload />
+          <FiDownload size={17} />
           Download CV
         </a>
 
@@ -104,7 +105,7 @@ const AboutContent = () => {
           smooth
           duration={500}
           offset={-80}
-          className="cursor-pointer rounded-full border border-cyan-500 px-8 py-3 text-center font-semibold text-cyan-400 transition-all duration-300 hover:bg-cyan-500 hover:text-white"
+          className="flex items-center justify-center rounded-full border border-cyan-500 px-4 py-3 text-center text-sm font-semibold text-cyan-400 transition-all duration-300 hover:bg-cyan-500 hover:text-white sm:px-8 sm:py-3 sm:text-base"
         >
           Let's Talk
         </Link>

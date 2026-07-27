@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden bg-slate-950 py-24"
+      className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-22"
     >
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
@@ -21,15 +21,15 @@ const Experience = () => {
           viewport={{ once: true }}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
-          <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-lg font-semibold text-cyan-400">
+          <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-sm sm:text-sm md:text-sm font-semibold text-cyan-400">
             My Journey
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mt-6 font-bold text-white text-2xl sm:text-4xl md:text-4xl">
             Learning & Experience Journey
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-400">
+          <p className="mt-5 leading-8 text-slate-400 text-sm sm:text-base md:text-lg">
             Every project and every technology I learned has helped shape me
             into a better developer. Here's my journey so far.
           </p>
@@ -38,7 +38,7 @@ const Experience = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Center Line */}
-          <div className="absolute left-5 top-0 h-full w-1 rounded-full bg-slate-800 md:left-1/2 md:-translate-x-1/2">
+          <div className="absolute left-4 top-0 h-full w-0.5 rounded-full bg-slate-800 md:left-1/2 md:-translate-x-1/2">
             <motion.div
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
@@ -48,17 +48,17 @@ const Experience = () => {
             />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
             {timelineData.map((item, index) => (
               <div
                 key={item.title}
                 className="relative"
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-5 top-10 z-20 h-5 w-5 -translate-x-1/2 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_25px_#22d3ee] md:left-1/2" />
+                <div className="absolute left-4 top-8 z-20 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-slate-950 bg-cyan-400 shadow-[0_0_15px_#22d3ee] md:left-1/2 md:h-5 md:w-5 md:border-4 md:shadow-[0_0_20px_#22d3ee]" />
 
-                {/* Mobile Line Offset */}
-                <div className="pl-14 md:pl-0">
+                {/* Card */}
+                <div className="pl-10 md:pl-0">
                   <TimelineCard
                     item={item}
                     index={index}

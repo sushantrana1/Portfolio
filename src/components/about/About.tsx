@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-slate-950 py-16"
+      className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-22"
     >
       {/* Background Glow */}
       <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />

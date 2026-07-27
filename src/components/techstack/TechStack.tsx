@@ -94,18 +94,18 @@ const TechStack = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: .7 }}
           viewport={{ once: true }}
-         className="mx-auto mb-12 max-w-3xl text-center sm:mb-16"
+         className="mx-auto mb-12 max-w-3xl text-center sm:mb-12"
         >
           <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-500/10 
-          px-4 py-2 text-lg font-semibold tracking-wide text-cyan-400 sm:text-lg">
+          px-4 py-2 font-semibold tracking-wide text-cyan-400 text-sm sm:text-sm md:text-sm">
             My Tech Stack
           </span>
 
-          <h2 className="mt-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mt-5 text-2xl font-bold leading-tight text-white sm:text-4xl md:text-4xl ">
             Technologies I Use
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-400 text-sm sm:text-base md:text-lg">
             I build fast, scalable and responsive web applications using
             modern technologies focused on performance, maintainability,
             and great user experience.
@@ -113,40 +113,41 @@ const TechStack = () => {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-6">
-          {techStack.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: .45,
-                delay: index * .05,
-              }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -10,
-                scale: 1.05,
-              }}
-              className="group relative flex min-h-[170px] flex-col justify-center overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 p-4
-               text-center backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/30 
-               hover:shadow-xl hover:shadow-cyan-500/10 sm:min-h-[190px] sm:rounded-3xl sm:p-6"
-            >
-              <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 bg-gradient-to-br from-cyan-500/5 to-blue-500/5" />
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6">
+  {techStack.map((tech, index) => (
+    <motion.div
+      key={tech.name}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.45,
+        delay: index * 0.05,
+      }}
+      viewport={{ once: true }}
+      whileHover={{
+        y: -8,
+        scale: 1.05,
+      }}
+      className="group relative flex min-h-[110px] flex-col items-center justify-center overflow-hidden rounded-xl border border-slate-800 bg-slate-900/60 p-2 text-center backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-500/10 sm:min-h-[140px] sm:p-4 lg:min-h-[165px] lg:p-5"
+    >
+      {/* Glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 transition duration-300 group-hover:opacity-100" />
 
-              <motion.div
-                whileHover={{ rotate: 8, scale: 1.15 }}
-                className={`relative z-10 mb-3 text-4xl sm:mb-5 sm:text-5xl ${tech.color}`}
-              >
-                {tech.icon}
-              </motion.div>
+      {/* Icon */}
+      <motion.div
+        whileHover={{ rotate: 8, scale: 1.12 }}
+        className={`relative z-10 mb-2 text-2xl sm:text-4xl lg:text-5xl ${tech.color}`}
+      >
+        {tech.icon}
+      </motion.div>
 
-              <h3 className="relative z-10 text-sm font-semibold text-white sm:text-base lg:text-lg">
-                {tech.name}
-              </h3>
-            </motion.div>
-          ))}
-        </div>
+      {/* Name */}
+      <h3 className="relative z-10 text-[11px] font-semibold leading-tight text-white sm:text-sm lg:text-base">
+        {tech.name}
+      </h3>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );

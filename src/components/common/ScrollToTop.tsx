@@ -4,17 +4,36 @@ import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
+  const [showButton, setShowButton] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setVisible(window.scrollY > 400);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Only show after scrolling 400px
+      if (currentScrollY < 400) {
+        setVisible(false);
+        setShowButton(true);
+      } else {
+        setVisible(true);
+
+        if (currentScrollY > lastScrollY) {
+          // Scrolling Down
+          setShowButton(false);
+        } else {
+          // Scrolling Up
+          setShowButton(true);
+        }
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -33,9 +52,9 @@ const ScrollToTop = () => {
             y: 20,
           }}
           animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
+            opacity: showButton ? 1 : 0,
+            scale: showButton ? 1 : 0.8,
+            y: showButton ? 0 : 20,
           }}
           exit={{
             opacity: 0,
@@ -43,7 +62,8 @@ const ScrollToTop = () => {
             y: 20,
           }}
           transition={{
-            duration: 0.25,
+            duration: 0.3,
+            ease: "easeInOut",
           }}
           onClick={scrollToTop}
           className="

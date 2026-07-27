@@ -58,21 +58,21 @@ const projects = [
     featured: true,
   },
   {
-  title: "Weather Forecast App",
-  subtitle: "Personal Project",
-  description:
-    "A weather application built with Html and JavaScript that provides real-time weather conditions, location-based weather and using a weather API.",
-  image: Weather, 
-  technologies: [
-    "HTML",
-    "JavaScript",
-    "Tailwind CSS",
-    "Weather API",
-  ],
-  github: "https://github.com/sushantrana1/Weather-app",
-  live: "https://weather-app-two-rouge-71.vercel.app/",
-  featured: true,
-},
+    title: "Weather Forecast App",
+    subtitle: "Personal Project",
+    description:
+      "A weather application built with Html and JavaScript that provides real-time weather conditions, location-based weather and using a weather API.",
+    image: Weather,
+    technologies: [
+      "HTML",
+      "JavaScript",
+      "Tailwind CSS",
+      "Weather API",
+    ],
+    github: "https://github.com/sushantrana1/Weather-app",
+    live: "https://weather-app-two-rouge-71.vercel.app/",
+    featured: true,
+  },
 ];
 
 const FeaturedProjects = () => {
@@ -94,15 +94,15 @@ const FeaturedProjects = () => {
           viewport={{ once: true }}
           className="mx-auto mb-10 max-w-3xl text-center sm:mb-14 lg:mb-16"
         >
-          <span className="inline-block rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-lg font-semibold tracking-wide text-cyan-400 ">
+          <span className="inline-block rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm sm:text-sm md:text-sm font-semibold tracking-wide text-cyan-400 ">
             My Work
           </span>
 
-          <h2 className="mt-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-bold leading-tight text-white text-2xl sm:text-4xl md:text-4xl">
             Featured Projects
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base sm:leading-8 lg:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-400 sm:leading-8 text-sm sm:text-base md:text-lg">
             Some of my best projects demonstrating full-stack development,
             responsive design, clean architecture, and modern UI/UX.
           </p>

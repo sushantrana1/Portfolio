@@ -121,7 +121,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-slate-950 py-22"
+      className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-22"
     >
       {/* Glow */}
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
@@ -136,75 +136,74 @@ const Skills = () => {
           viewport={{ once: true }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-lg font-semibold text-cyan-400">
+          <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-500/10 
+          px-4 py-2 font-semibold tracking-wide text-cyan-400 text-sm sm:text-sm md:text-sm">
             My Skills
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mt-5 font-bold text-white text-2xl sm:text-4xl md:text-4xl">
             Skills & Technologies
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-400">
+          <p className="mt-5 leading-8 text-slate-400 text-sm sm:text-base md:text-lg">
             Technologies and tools I use to build fast, scalable and modern web
             applications.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid gap-8 lg:grid-cols-3">
-          {skillGroups.map((group, index) => (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: .5,
-                delay: index * .15,
-              }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="rounded-3xl border border-slate-800 bg-slate-900/60 p-7 backdrop-blur-xl"
-            >
-              <h3 className="mb-8 text-2xl font-bold text-white">
-                {group.title}
-              </h3>
+<div className="grid gap-5 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+  {skillGroups.map((group, index) => (
+    <motion.div
+      key={group.title}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.15,
+      }}
+      viewport={{ once: true }}
+      whileHover={{ y: -8 }}
+      className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-xl sm:p-6 lg:rounded-3xl lg:p-7"
+    >
+      <h3 className="mb-5 text-lg font-bold text-white sm:mb-6 sm:text-xl lg:mb-8 lg:text-2xl">
+        {group.title}
+      </h3>
 
-              <div className="space-y-6">
-                {group.skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="mb-2 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className={`text-2xl ${skill.color}`}>
-                          {skill.icon}
-                        </span>
+      <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+        {group.skills.map((skill) => (
+          <div key={skill.name}>
+            <div className="mb-2 flex items-center justify-between">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span className={`text-xl sm:text-2xl ${skill.color}`}>
+                  {skill.icon}
+                </span>
 
-                        <span className="font-medium text-white">
-                          {skill.name}
-                        </span>
-                      </div>
-
-                      <span className="text-sm text-cyan-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-
-                    <div className="h-2 overflow-hidden rounded-full bg-slate-800">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{
-                          duration: 1,
-                        }}
-                        viewport={{ once: true }}
-                        className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
-                      />
-                    </div>
-                  </div>
-                ))}
+                <span className="text-sm font-medium text-white sm:text-base">
+                  {skill.name}
+                </span>
               </div>
-            </motion.div>
-          ))}
-        </div>
+
+              <span className="text-xs text-cyan-400 sm:text-sm">
+                {skill.level}%
+              </span>
+            </div>
+
+            <div className="h-1.5 overflow-hidden rounded-full bg-slate-800 sm:h-2">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: `${skill.level}%` }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );

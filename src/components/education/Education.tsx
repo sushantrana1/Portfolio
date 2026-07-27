@@ -42,7 +42,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="relative overflow-hidden bg-slate-950 py-22"
+      className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-22"
     >
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-blue-500/10 blur-[120px]" />
@@ -53,18 +53,19 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-3xl text-center"
+          className="mx-auto mb-12 max-w-3xl text-center"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-500/10 px-5 py-2 text-lg font-semibold text-cyan-400">
+          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20
+           bg-cyan-500/10 px-5 py-2 font-semibold text-cyan-400 text-sm sm:text-sm md:text-sm">
             <FaGraduationCap />
             My Education
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mt-5 font-bold text-white text-2xl sm:text-4xl md:text-4xl">
             Academic Journey
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-400">
+          <p className="mt-5 leading-8 text-slate-400 text-sm sm:text-base md:text-lg">
             My academic journey has equipped me with strong knowledge in
             information management, software engineering, databases and modern
             web development.

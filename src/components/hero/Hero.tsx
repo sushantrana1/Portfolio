@@ -51,7 +51,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               src={Sushant}
               alt="Sushant Rana"
-              className="relative h-56 w-56 rounded-full border-4 border-cyan-400 object-cover shadow-2xl sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
+              className="relative h-45 w-45 rounded-full border-4 border-cyan-400 object-cover shadow-2xl sm:h-62 sm:w-62 md:h-70 md:w-70 lg:h-90 lg:w-90"
             />
 
             {/* React */}
@@ -124,7 +124,7 @@ const Hero = () => {
           </p>
 
           {/* Heading */}
-          <h1 className="mb-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-5 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             Sushant{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Rana
@@ -149,16 +149,16 @@ const Hero = () => {
           />
 
           {/* Description */}
-          <p className="mx-auto max-w-xl text-base leading-7 text-gray-400 md:text-justify sm:text-lg sm:leading-8 lg:mx-0">
+          <p className="mx-auto max-w-xl text-base leading-7 text-gray-400 md:text-justify sm:text-sm lg:text-lg md:text-sm sm:leading-8 lg:mx-0">
             I specialize in building modern, scalable, and high-performance web applications using React, TypeScript, Node.js, and the MERN stack.
             I enjoy turning complex ideas into elegant digital experiences with clean code and intuitive user interfaces.
           </p>
 
           {/* Buttons */}
-          <div className="mt-10 grid w-full max-w-md grid-cols-2 gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
+          <div className="mt-8 grid w-full max-w-sm grid-cols-2 gap-3 sm:mt-10 sm:max-w-md sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
             <a
               href="#contact"
-              className="flex items-center justify-center rounded-full bg-cyan-500 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-cyan-600"
+              className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition duration-300 hover:scale-105 sm:px-6 sm:py-3 sm:text-base"
             >
               Hire Me
             </a>
@@ -167,7 +167,7 @@ const Hero = () => {
               href="/resume/Sushant_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-full border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 transition duration-300 hover:bg-cyan-500 hover:text-white"
+              className="flex items-center justify-center gap-2 rounded-full border border-cyan-500 px-4 py-2.5 text-sm font-semibold text-cyan-400 transition duration-300 hover:bg-cyan-500 hover:text-white sm:px-6 sm:py-3 sm:text-base"
             >
               <FiDownload />
               View Resume

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-slate-950 py-20 sm:py-24"
+      className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-22"
     >
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
@@ -19,18 +19,19 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-3xl text-center"
+          className="mx-auto mb-16 max-w-4xl text-center"
         >
-          <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-lg font-semibold text-cyan-400">
+          <span className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 
+          text-sm sm:text-sm md:text-sm font-semibold text-cyan-400">
             Contact Me
           </span>
 
-          <h2 className="mt-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-6 font-bold text-white text-2xl sm:text-4xl md:text-4xl">
             Let's Build Something Amazing
           </h2>
 
-          <p className="mt-5 text-base leading-7 text-slate-400 sm:text-lg">
-            Whether you have an internship opportunity, freelance project, or
+          <p className="mt-5 leading-7 text-slate-400 text-sm sm:text-base md:text-lg">
+            Whether you have an internship opportunity, or
             simply want to connect, I'd love to hear from you.
           </p>
         </motion.div>

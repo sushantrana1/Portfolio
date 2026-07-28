@@ -3,14 +3,6 @@ import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import Sushant from "../../assets/images/Sushant.jpg";
-import {
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiMongodb,
-  SiGit,
-} from "react-icons/si";
 
 const Hero = () => {
   return (
@@ -53,60 +45,7 @@ const Hero = () => {
               alt="Sushant Rana"
               className="relative h-45 w-45 rounded-full border-4 border-cyan-400 object-cover shadow-2xl sm:h-62 sm:w-62 md:h-70 md:w-70 lg:h-90 lg:w-90"
             />
-
-            {/* React */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -left-3 top-5 rounded-full bg-slate-900 p-2 text-xl text-cyan-400 shadow-lg sm:-left-6 sm:top-6 sm:p-3 sm:text-3xl"
-            >
-              <SiReact />
-            </motion.div>
-
-            {/* TypeScript */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -right-3 top-10 rounded-full bg-slate-900 p-2 text-xl text-blue-500 shadow-lg sm:-right-6 sm:top-16 sm:p-3 sm:text-3xl"
-            >
-              <SiTypescript />
-            </motion.div>
-
-            {/* Tailwind */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute left-0 bottom-8 rounded-full bg-slate-900 p-2 text-xl text-sky-400 shadow-lg sm:bottom-10 sm:p-3 sm:text-3xl"
-            >
-              <SiTailwindcss />
-            </motion.div>
-
-            {/* Node */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute right-0 bottom-0 rounded-full bg-slate-900 p-2 text-xl text-green-500 shadow-lg sm:p-3 sm:text-3xl"
-            >
-              <SiNodedotjs />
-            </motion.div>
-
-            {/* Git */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute left-8 -bottom-3 rounded-full bg-slate-900 p-2 text-xl text-orange-500 shadow-lg sm:left-12 sm:-bottom-5 sm:p-3 sm:text-3xl"
-            >
-              <SiGit />
-            </motion.div>
-
-            {/* MongoDB */}
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute right-8 -top-3 rounded-full bg-slate-900 p-2 text-xl text-green-400 shadow-lg sm:right-12 sm:-top-5 sm:p-3 sm:text-3xl"
-            >
-              <SiMongodb />
-            </motion.div>
+ 
 
           </div>
         </motion.div>

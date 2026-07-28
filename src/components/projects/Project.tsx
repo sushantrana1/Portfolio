@@ -53,8 +53,8 @@ const projects = [
       "Tailwind CSS",
       "Framer Motion",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/sushantrana1/Portfolio",
+    live: "https://portfolio-blond-six-83.vercel.app/",
     featured: true,
   },
   {
@@ -70,7 +70,7 @@ const projects = [
       "Weather API",
     ],
     github: "https://github.com/sushantrana1/Weather-app",
-    live: "https://weather-app-two-rouge-71.vercel.app/",
+    live: "https://weather-app-mu-taupe-28.vercel.app/",
     featured: true,
   },
 ];

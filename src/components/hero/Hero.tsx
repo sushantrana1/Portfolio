@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import Sushant from "../../assets/images/Sushant.jpg";
+import Sushant from "../../assets/images/Sushant.png";
 
 const Hero = () => {
   return (
@@ -40,13 +40,22 @@ const Hero = () => {
 
             {/* Profile Image */}
             <motion.img
-              whileHover={{ scale: 1.05 }}
-              src={Sushant}
-              alt="Sushant Rana"
-              className="relative h-45 w-45 rounded-full border-4 border-cyan-400 object-cover shadow-2xl sm:h-62 sm:w-62 md:h-70 md:w-70 lg:h-90 lg:w-90"
-            />
- 
-
+  whileHover={{ scale: 1.05 }}
+  src={Sushant}
+  alt="Sushant Rana"
+  className="
+    relative
+    h-44 w-44
+    rounded-full
+    border-4 border-cyan-400
+    object-cover
+    object-[center_25%]
+    shadow-2xl
+    sm:h-56 sm:w-56
+    md:h-64 md:w-64
+    lg:h-80 lg:w-80
+  "
+/>
           </div>
         </motion.div>
 

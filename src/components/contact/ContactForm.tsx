@@ -40,7 +40,7 @@ const ContactForm = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-6 lg:p-8"
+      className=" rounded-2xl border border-slate-800 bg-slate-900/60 p-4 backdrop-blur-xl sm:rounded-3xl sm:p-6 lg:p-8"
     >
       {/* Badge */}
       <span className="inline-block rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1.5 text-[11px] font-semibold text-cyan-400 sm:px-4 sm:py-2 sm:text-xs">
@@ -61,7 +61,7 @@ const ContactForm = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="mt-6 space-y-4 sm:mt-8 sm:space-y-6"
+        className="mt-3 space-y-4 sm:mt-6 sm:space-y-6"
       >
         {/* Name */}
         <div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
           </label>
 
           <textarea
-            rows={4}
+            rows={5}
             name="message"
             required
             placeholder="Write your message..."

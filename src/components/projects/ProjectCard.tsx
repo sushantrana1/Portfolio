@@ -24,47 +24,51 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <motion.div
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.3 }}
-      className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-xl transition-all duration-300 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 lg:rounded-3xl"
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.25 }}
+      className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-xl transition-all duration-300 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10"
     >
       {/* Image */}
       <div className="relative overflow-hidden">
         {featured && (
-          <span className="absolute left-3 top-3 z-20 rounded-full bg-cyan-500 px-3 py-1 text-[10px] font-semibold text-white shadow-lg sm:left-4 sm:top-4 sm:text-xs">
-            ⭐ Featured
+          <span className="absolute left-3 top-3 z-20 rounded-full bg-cyan-500 px-2.5 py-1 text-[10px] font-semibold text-white shadow-lg">
+            Featured
           </span>
         )}
 
         <img
           src={image}
           alt={title}
-          className="h-40 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-44 lg:h-52"
+          className="h-32 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-36 lg:h-40"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+        {/* Image Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="p-4 sm:p-5 lg:p-6">
-        <p className="text-[11px] font-semibold uppercase tracking-wider text-cyan-400 sm:text-xs">
+      <div className="p-4 sm:p-5">
+        {/* Subtitle */}
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-cyan-400 sm:text-xs">
           {subtitle}
         </p>
 
-        <h3 className="mt-2 text-lg font-bold text-white sm:text-xl lg:text-2xl">
+        {/* Title */}
+        <h3 className="mt-1.5 text-lg font-bold text-white sm:text-xl">
           {title}
         </h3>
 
-        <p className="mt-3 text-sm leading-6 text-slate-400 lg:mt-4 lg:text-[15px] lg:leading-7">
+        {/* Description */}
+        <p className="mt-2.5 line-clamp-3 text-xs leading-5 text-slate-400 sm:text-sm sm:leading-6">
           {description}
         </p>
 
-        {/* Tech Stack */}
-        <div className="mt-4 flex flex-wrap gap-2 lg:mt-5">
+        {/* Technologies */}
+        <div className="mt-4 flex flex-wrap gap-1.5">
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-300 sm:px-3 sm:text-xs"
+              className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-300 sm:text-[11px]"
             >
               {tech}
             </span>
@@ -72,14 +76,14 @@ const ProjectCard = ({
         </div>
 
         {/* Buttons */}
-        <div className="mt-5 flex gap-2 sm:mt-6 sm:gap-3">
+        <div className="mt-4 flex gap-2">
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-slate-700 px-3 py-2.5 text-xs font-medium text-white transition-all duration-300 hover:border-cyan-500 hover:bg-cyan-500 sm:rounded-xl sm:px-4 sm:py-2.5 sm:text-sm"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-700 px-3 py-2 text-[11px] font-medium text-white transition-all duration-300 hover:border-cyan-500 hover:bg-cyan-500 sm:gap-2 sm:py-2.5 sm:text-xs"
           >
-            <FaGithub className="text-sm sm:text-base" />
+            <FaGithub className="text-xs sm:text-sm" />
             GitHub
           </a>
 
@@ -87,9 +91,9 @@ const ProjectCard = ({
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-cyan-500 px-3 py-2.5 text-xs font-semibold text-white transition-all duration-300 hover:bg-cyan-600 sm:rounded-xl sm:px-4 sm:py-2.5 sm:text-sm"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-cyan-500 px-3 py-2 text-[11px] font-semibold text-white transition-all duration-300 hover:bg-cyan-600 sm:gap-2 sm:py-2.5 sm:text-xs"
           >
-            <FaExternalLinkAlt className="text-sm sm:text-base" />
+            <FaExternalLinkAlt className="text-[10px] sm:text-xs" />
             Live Demo
           </a>
         </div>

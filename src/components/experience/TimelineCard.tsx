@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import type { ElementType } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 type TimelineItem = {
   year: string;
@@ -6,7 +8,7 @@ type TimelineItem = {
   subtitle: string;
   description: string;
   tech: string[];
-  icon: React.ElementType;
+  icon: ElementType;
   featured?: boolean;
 };
 
@@ -18,73 +20,106 @@ type Props = {
 const TimelineCard = ({ item, index }: Props) => {
   const Icon = item.icon;
 
+  const isLeft = index % 2 === 0;
+
   return (
     <motion.div
       initial={{
         opacity: 0,
-        x: index % 2 === 0 ? -80 : 80,
+        x: isLeft ? -50 : 50,
       }}
       whileInView={{
         opacity: 1,
         x: 0,
       }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
       className={`relative flex ${
-        index % 2 === 0 ? "justify-start" : "justify-end"
+        isLeft ? "md:justify-start" : "md:justify-end"
       }`}
     >
-      <div className="relative w-full md:w-[46%]">
+      {/* Card Container */}
+      <div className="relative w-full md:w-[44%]">
         {/* Featured Badge */}
         {item.featured && (
-          <span className="absolute -top-2 right-3 z-20 rounded-full bg-cyan-500 px-2.5 py-1 text-[10px] font-semibold text-white sm:px-3 sm:text-[11px] lg:-top-4 lg:right-5 lg:px-4 lg:py-1 lg:text-xs">
-            ⭐ Featured Project
-          </span>
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="absolute -top-3 right-3 z-20 inline-flex items-center gap-1 rounded-full border border-cyan-400/20 bg-cyan-500 px-2.5 py-1 text-[10px] font-semibold text-white shadow-lg shadow-cyan-500/20 sm:right-4 sm:px-3 sm:text-xs"
+          >
+            ⭐ Featured
+          </motion.span>
         )}
 
         {/* Card */}
         <motion.div
           whileHover={{
-            y: -8,
-            scale: 1.02,
+            y: -5,
           }}
-          className="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_rgba(34,211,238,.15)] sm:p-5 lg:rounded-3xl lg:p-6"
+          transition={{ duration: 0.25 }}
+          className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 p-4 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/30 hover:shadow-xl hover:shadow-cyan-500/10 sm:p-5 lg:p-6"
         >
-          {/* Year */}
-          <p className="mb-2 text-[11px] font-semibold tracking-wider text-cyan-400 sm:text-xs lg:text-sm">
-            {item.year}
-          </p>
+          {/* Card Glow */}
+          <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-cyan-500/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-          {/* Icon */}
-          <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-lg text-cyan-400 sm:h-12 sm:w-12 sm:text-xl lg:mb-4 lg:h-14 lg:w-14 lg:rounded-2xl lg:text-2xl">
-            <Icon />
-          </div>
+          <div className="relative">
+            {/* Top Row */}
+            <div className="flex items-start justify-between gap-3">
+              {/* Icon */}
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-lg text-cyan-400 sm:h-11 sm:w-11 sm:text-xl">
+                <Icon />
+              </div>
 
-          {/* Title */}
-          <h3 className="text-lg font-bold text-white lg:text-2xl">
-            {item.title}
-          </h3>
-
-          {/* Subtitle */}
-          <p className="mt-1 text-xs text-cyan-300 lg:text-sm">
-            {item.subtitle}
-          </p>
-
-          {/* Description */}
-          <p className="mt-3 text-sm leading-6 text-slate-400 lg:mt-5 lg:leading-7">
-            {item.description}
-          </p>
-
-          {/* Tech Stack */}
-          <div className="mt-4 flex flex-wrap gap-2 lg:mt-6">
-            {item.tech.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-300 lg:px-3 lg:text-xs"
-              >
-                {tech}
+              {/* Year */}
+              <span className="rounded-full border border-slate-700 bg-slate-950/60 px-2.5 py-1 text-[10px] font-semibold text-slate-400 sm:text-xs">
+                {item.year}
               </span>
-            ))}
+            </div>
+
+            {/* Title */}
+            <h3 className="mt-4 text-lg font-bold leading-snug text-white sm:text-xl">
+              {item.title}
+            </h3>
+
+            {/* Subtitle */}
+            <p className="mt-1 text-xs font-medium text-cyan-400 sm:text-sm">
+              {item.subtitle}
+            </p>
+
+            {/* Divider */}
+            <div className="my-4 h-px bg-slate-800" />
+
+            {/* Description */}
+            <p className="text-sm leading-6 text-slate-400">
+              {item.description}
+            </p>
+
+            {/* Technologies */}
+            <div className="mt-5">
+              <p className="mb-2.5 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+                Technologies
+              </p>
+
+              <div className="flex flex-wrap gap-1.5">
+                {item.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="inline-flex items-center gap-1 rounded-full border border-cyan-500/15 bg-cyan-500/5 px-2.5 py-1 text-[10px] font-medium text-cyan-300 transition-colors duration-300 group-hover:border-cyan-500/25 sm:text-xs"
+                  >
+                    <FaCheckCircle className="text-[8px]" />
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

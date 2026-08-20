@@ -11,7 +11,7 @@ import TechStack from "./components/techstack/TechStack";
 import About from "./components/about/About";
 import Education from "./components/education/Education";
 import Skills from "./components/skills/Skills";
-import Experience from "./components/experience/Experience";
+// import Experience from "./components/experience/Experience";
 import Project from "./components/projects/Project";
 import Achievements from "./components/achievements/Achievements";
 import Contact from "./components/contact/Contact";
@@ -44,7 +44,7 @@ function App() {
           <About />
           <Education />
           <Skills />
-          <Experience />
+          {/* <Experience /> */}
           <Project />
           <Achievements />
           <Contact />

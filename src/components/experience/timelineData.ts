@@ -1,9 +1,9 @@
 import {
+  FaBriefcase,
   FaCode,
-  FaReact,
   FaDatabase,
   FaLaptopCode,
-  FaBriefcase,
+  FaReact,
 } from "react-icons/fa";
 
 export const timelineData = [
@@ -12,7 +12,7 @@ export const timelineData = [
     title: "Started Web Development",
     subtitle: "Learning Journey",
     description:
-      "Started my web development journey by learning HTML, CSS and JavaScript, building responsive websites and understanding programming fundamentals.",
+      "Started my web development journey by learning HTML, CSS, and JavaScript. Built responsive websites while developing a strong understanding of programming fundamentals and web technologies.",
     tech: ["HTML", "CSS", "JavaScript"],
     icon: FaCode,
   },
@@ -22,8 +22,8 @@ export const timelineData = [
     title: "Frontend Development",
     subtitle: "React Ecosystem",
     description:
-      "Focused on React, TypeScript and Tailwind CSS while creating modern responsive user interfaces with reusable components.",
-    tech: ["React", "TypeScript", "Tailwind"],
+      "Focused on React, TypeScript, and Tailwind CSS while developing modern and responsive interfaces using reusable components, animations, and scalable frontend practices.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     icon: FaReact,
   },
 
@@ -32,7 +32,7 @@ export const timelineData = [
     title: "MediStock Inventory Management System",
     subtitle: "Academic Major Project",
     description:
-      "Developed a complete inventory management system with medicine management, billing, suppliers, purchases, employees and reports using PHP and MySQL.",
+      "Developed a complete pharmacy inventory management system featuring medicine management, billing, suppliers, purchases, employees, and reporting using PHP and MySQL.",
     tech: ["PHP", "MySQL", "Bootstrap"],
     icon: FaDatabase,
     featured: true,
@@ -41,27 +41,27 @@ export const timelineData = [
   {
     year: "2026",
     title: "MERN Stack Development",
-    subtitle: "Full Stack",
+    subtitle: "Full Stack Development",
     description:
-      "Expanded into backend development with Node.js, Express.js and MongoDB while building scalable full-stack applications.",
-    tech: ["Node.js", "Express", "MongoDB"],
+      "Expanded into backend development with Node.js, Express.js, and MongoDB while building full-stack applications and learning REST API development, database integration, and application architecture.",
+    tech: ["Node.js", "Express.js", "MongoDB"],
     icon: FaLaptopCode,
   },
 
   {
-  year: "2026",
-  title: "Full Stack Developer Intern",
-  subtitle: "MERN Stack Development",
-  description:
-    "Developed modern, responsive web applications using the MERN stack, React, TypeScript, Tailwind CSS, Node.js, Express.js, and MongoDB. Built reusable components, optimized UI/UX, integrated REST APIs, and collaborated using Git & GitHub.",
-  tech: [
-    "React",
-    "TypeScript",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Tailwind CSS",
-  ],
-  icon: FaBriefcase,
-},
+    year: "2026",
+    title: "Full Stack Developer Intern",
+    subtitle: "MERN Stack Development",
+    description:
+      "Developed modern responsive web applications using the MERN stack. Worked with reusable React components, TypeScript, Tailwind CSS, REST APIs, Node.js, Express.js, and MongoDB while collaborating through Git and GitHub.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+    icon: FaBriefcase,
+  },
 ];

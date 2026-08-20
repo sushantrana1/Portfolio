@@ -48,8 +48,8 @@ const projects = [
       "A responsive weather application that provides real-time weather information using a weather API, with a clean interface designed for both desktop and mobile devices.",
     image: Weather,
     technologies: ["HTML", "JavaScript", "Tailwind CSS", "Weather API"],
-    github: "https://github.com/sushantrana1/Weather-app",
-    live: "https://weather-app-mu-taupe-28.vercel.app/",
+    github: "https://github.com/sushantrana1/Weather-App",
+    live: "https://weather-app-lac-seven-79.vercel.app/",
   },
 ];
 

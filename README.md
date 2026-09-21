@@ -57,83 +57,6 @@ A modern, responsive, and animated developer portfolio built using **React**, **
 
 ---
 
-# 📂 Portfolio Sections
-
-- Home
-- About
-- Tech Stack
-- Education
-- Skills
-- Experience
-- Featured Projects
-- Achievements & Certifications
-- Contact
-- Footer
-
----
-
-# 💼 Featured Projects
-
-## 🏥 MediStock Inventory Management System
-
-A complete Pharmacy Inventory Management System developed using PHP and MySQL.
-
-### Features
-
-- Medicine Management
-- Supplier Management
-- Employee Management
-- Customer Management
-- Billing System
-- Sales Reports
-- Inventory Tracking
-
-**Tech Stack**
-
-- PHP
-- MySQL
-- JavaScript
-- HTML
-- CSS
-- Bootstrap
-
----
-
-## 🔧 Repair Service Website
-
-A modern responsive repair service website with beautiful UI and reusable components.
-
-**Tech Stack**
-
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-
----
-
-## 🌦 Weather Application
-
-A weather forecasting application using a public weather API with a modern responsive interface.
-
-**Features**
-
-- Current Weather
-- Temperature
-- Humidity
-- Wind Speed
-- City Search
-- Responsive Design
-
-**Tech Stack**
-
-- React
-- TypeScript
-- Tailwind CSS
-- Weather API
-
----
-
 ## 💼 Developer Portfolio
 
 This portfolio showcasing my work, skills, education and certifications.
@@ -147,7 +70,6 @@ Clone the repository
 ```bash
 git clone https://github.com/sushantrana1/Portfolio/
 ```
-
 
 Install dependencies
 
@@ -167,48 +89,9 @@ Build for production
 npm run build
 ```
 
----
-
-# 📁 Project Structure
-
-```
-src
-│
-├── assets
-├── components
-│   ├── about
-│   ├── achievements
-│   ├── common
-│   ├── contact
-│   ├── education
-│   ├── experience
-│   ├── footer
-│   ├── hero
-│   ├── navbar
-│   ├── projects
-│   ├── skills
-│   └── techstack
-│
-├── App.tsx
-└── main.tsx
-```
-
----
-
 # 📫 Connect With Me
 
 📧 Email: **sushantrana1121@gmail.com**
-
-### Social Links
-
-- GitHub: https://github.com/Sushantrana1
-- LinkedIn: https://www.linkedin.com/in/sushant-rana-5770a6266/
-
----
-
-# 🤝 Contributing
-
-Contributions, suggestions, and feedback are always welcome. Feel free to fork the repository and submit a pull request.
 
 ---
 
